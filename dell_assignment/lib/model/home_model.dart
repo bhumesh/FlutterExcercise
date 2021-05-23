@@ -1,11 +1,11 @@
-class CarasoulModel {
+class HomeModel {
   List<Items> items;
 
-  CarasoulModel({this.items});
+  HomeModel({this.items});
 
-  CarasoulModel.fromJson(Map<String, dynamic> json) {
+  HomeModel.fromJson(Map<String, dynamic> json) {
     if (json['items'] != null) {
-      items = [];
+      items = new List<Items>();
       json['items'].forEach((v) {
         items.add(new Items.fromJson(v));
       });
