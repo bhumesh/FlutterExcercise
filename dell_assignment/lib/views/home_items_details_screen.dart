@@ -56,7 +56,8 @@ class _HomeItemDetailsPageState extends State<HomeItemDetailsPage> {
                     },
                     child: Image.network(
                       detail.url,
-                      fit: BoxFit.cover,
+                      fit: BoxFit.fill,
+                      height: 250,
                       ),
                   ),
                   ListView.builder(

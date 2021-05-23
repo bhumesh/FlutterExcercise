@@ -3,7 +3,7 @@ Flutter exercise on MVVM model
 
 #Exercise on MVVM pattern in Flutter
 #Home Screen
-	-> Home screen uses data from json to build carasoul widget
+	 Home screen uses data from json to build carasoul widget
 	-> HomeViewModel class is responsible to get contains from json and parse in respective Models
 	-> on successfull update app will load Carosoul with number of items from response
 	-> Each Carousel item has image, header, and description

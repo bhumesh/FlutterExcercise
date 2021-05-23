@@ -24,12 +24,12 @@ class _MyHomePageState extends State<MyHomePage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      backgroundColor: Colors.grey,
       body: GetBuilder<HomeViewModel>(
         init: viewModel,
         builder: (_) {
           imageSliders = viewModel.data.items
         .map((item) => Container(
-          color: Colors.grey,
               child: InkWell(
                 onTap: () {
                   Get.to(HomeItemDetailsPage(data: item.details));
