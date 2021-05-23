@@ -18,7 +18,16 @@ class _MyHomePageState extends State<MyHomePage> {
   void initState() {
     viewModel = Get.put(HomeViewModel());
     viewModel.getHomeItems();
-    imageSliders = viewModel.data.items
+    super.initState();
+  }
+
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      body: GetBuilder<HomeViewModel>(
+        init: viewModel,
+        builder: (_) {
+          imageSliders = viewModel.data.items
         .map((item) => Container(
           color: Colors.grey,
               child: InkWell(
@@ -66,16 +75,6 @@ class _MyHomePageState extends State<MyHomePage> {
               ),
             ))
         .toList();
-
-    super.initState();
-  }
-
-  @override
-  Widget build(BuildContext context) {
-    return Scaffold(
-      body: GetBuilder<HomeViewModel>(
-        init: viewModel,
-        builder: (_) {
           return Padding(
             padding: const EdgeInsets.only(top: 250.0),
             child: Container(

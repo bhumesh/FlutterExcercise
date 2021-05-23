@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:dell_assignment/model/home_model.dart';
-
+import 'package:dell_assignment/views/home_items_details_notes_screen.dart';
 
 class HomeItemDetailsPage extends StatefulWidget {
   final List<Details> data;
@@ -21,12 +21,12 @@ class _HomeItemDetailsPageState extends State<HomeItemDetailsPage> {
         title: Text(''),
         centerTitle: true,
         iconTheme: IconThemeData(
-          color: Colors.black, //change your color here
+          color: Colors.black,
         ),
         leading: GestureDetector(
           onTap: () => Get.back(),
           child: Icon(
-              Icons.arrow_back_ios,  // add custom icons also
+              Icons.arrow_back_ios,
             ),
         ),
       ),
@@ -45,19 +45,20 @@ class _HomeItemDetailsPageState extends State<HomeItemDetailsPage> {
   }
 
   Widget _buildDetailItem(Details detail) {
-    // return ListTile(
-    //   title: Text(
-    //     detail.notes[0],
-    //   ),
-    // );
     return Container(
               child: Column(
                 children: <Widget>[
-                  Image.network(
-                  detail.url,
-                  height: 200,
-                  width: 280,
-                  fit: BoxFit.cover,
+                  InkWell(
+                    onTap: () {
+                      final HomeItemDetailNotePage page = HomeItemDetailNotePage(noteId: detail.id);
+                      Get.to(page);
+                    },
+                    child: Image.network(
+                      detail.url,
+                      height: 200,
+                      width: 280,
+                      fit: BoxFit.cover,
+                      ),
                   ),
                   ListView.builder(
                     padding: EdgeInsets.fromLTRB(16, 8, 16, 30),
@@ -69,7 +70,7 @@ class _HomeItemDetailsPageState extends State<HomeItemDetailsPage> {
                   },
                 ),
               ],
-      ),
-    );
+            ),
+        );
   }
 }
