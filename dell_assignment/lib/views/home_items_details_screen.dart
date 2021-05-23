@@ -37,10 +37,11 @@ class _HomeItemDetailsPageState extends State<HomeItemDetailsPage> {
 
   Widget _buildDetail() {
     return ListView.builder(
-      itemCount: widget.data.length,
-      itemBuilder: (context, i) {
-        return _buildDetailItem(widget.data[i]);
-      }
+        padding: EdgeInsets.all(16.0),
+        itemCount: widget.data.length,
+        itemBuilder: (context, i) {
+          return _buildDetailItem(widget.data[i]);
+        }
     );
   }
 
@@ -55,8 +56,6 @@ class _HomeItemDetailsPageState extends State<HomeItemDetailsPage> {
                     },
                     child: Image.network(
                       detail.url,
-                      height: 200,
-                      width: 280,
                       fit: BoxFit.cover,
                       ),
                   ),

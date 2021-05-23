@@ -2,54 +2,52 @@
 	"items": [
 	{
 		"url": "https://picsum.photos/id/237/200/300",
-			"header": "Header",
-			"description": "Some description",
+			"header": "My Info",
+			"description": "Contains info about my current activity",
 			"details": [
 			{
 				"url": "https://picsum.photos/id/237/200/300",
 				"notes": [
-					"note1",
-					"notes2",
-					"note1",
-					"notes2"
+					"I am bhumesh",
+					"I am an iOS application Developer",
+					"I am learning Flutter Development",
+					"I am enjoying it"
 				],
 				"id": "abcd1234"
 			},
 			{
 				"url": "https://picsum.photos/id/237/200/300",
 				"notes": [
-					"note1",
-					"notes2",
-					"note1",
-					"notes2"
+					"My name is John",
+					"I am 32 years old",
+					"I lived in USA",
+					"I worked in XYZ companay"
 				],
 				"id": "abcd12345"
 			},
 				{
 				"url": "https://picsum.photos/id/237/200/300",
 				"notes": [
-					"note1",
-					"notes2",
-					"note1",
-					"notes2"
+					"Some ohter Notes",
+					"Add More note here",
+					"Add more description here"
 				],
 				"id": "abcd12346"
 			}
-
 		]
 	},
 		{
 		"url": "https://picsum.photos/id/237/200/300",
-			"header": "Header2",
-			"description": "Some description",
+			"header": "Food Lovers",
+			"description": "Info on what they loves to eat",
 			"details": [
 			{
 				"url": "https://picsum.photos/id/237/200/300",
 				"notes": [
-					"note1",
-					"notes2",
-					"note1",
-					"notes2"
+					"He is John",
+					"She is marry",
+					"John loves to eat pizza",
+					"Marry too"
 				],
 				"id": "abcd1237"
 			}
@@ -57,16 +55,14 @@
 	},
 		{
 		"url": "https://picsum.photos/id/237/200/300",
-			"header": "Header",
-			"description": "Some description",
+			"header": "Header Title Example",
+			"description": "Description Text Example",
 			"details": [
 			{
 				"url": "https://picsum.photos/id/237/200/300",
 				"notes": [
-					"note1",
-					"notes2",
-					"note1",
-					"notes2"
+					"Notes Example",
+					"Note Example"
 				],
 				"id": "abcd1238"
 			}

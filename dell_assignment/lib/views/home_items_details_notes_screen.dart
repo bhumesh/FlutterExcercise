@@ -52,8 +52,11 @@ class _HomeItemDetailNotePageState extends State<HomeItemDetailNotePage> {
     if (viewModel.data == null) {
       return Text("Loading");
     } else {
-      return ListView.builder(
+      return ListView.separated(
           itemCount: itemsNotes.length,
+          separatorBuilder: (context, index) {
+            return Divider();
+          },
           itemBuilder: (context, i) {
             return _buildDetailItem(itemsNotes[i]);
           }
@@ -69,7 +72,7 @@ class _HomeItemDetailNotePageState extends State<HomeItemDetailNotePage> {
       ),
       trailing: Icon(
         Icons.arrow_forward_ios,
-        color: Colors.white,
+        color: Colors.black,
       ),
       onTap: () {
         print("${note.url} clicked");
