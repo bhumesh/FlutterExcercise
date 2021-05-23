@@ -1,9 +1,10 @@
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
 import 'package:dell_assignment/model/home_model.dart';
 
 
 class HomeItemDetailsPage extends StatefulWidget {
-  final Items data;
+  final List<Details> data;
   const HomeItemDetailsPage({this.data});
 
   @override
@@ -13,8 +14,62 @@ class HomeItemDetailsPage extends StatefulWidget {
 class _HomeItemDetailsPageState extends State<HomeItemDetailsPage> {
   @override
   Widget build(BuildContext context) {
+    
+    return Scaffold(
+      appBar: AppBar(
+        backgroundColor: Colors.grey,
+        title: Text(''),
+        centerTitle: true,
+        iconTheme: IconThemeData(
+          color: Colors.black, //change your color here
+        ),
+        leading: GestureDetector(
+          onTap: () => Get.back(),
+          child: Icon(
+              Icons.arrow_back_ios,  // add custom icons also
+            ),
+        ),
+      ),
+      backgroundColor: Colors.grey,
+      body: _buildDetail(),
+    );
+  }
+
+  Widget _buildDetail() {
+    return ListView.builder(
+      itemCount: widget.data.length,
+      itemBuilder: (context, i) {
+        return _buildDetailItem(widget.data[i]);
+      }
+    );
+  }
+
+  Widget _buildDetailItem(Details detail) {
+    // return ListTile(
+    //   title: Text(
+    //     detail.notes[0],
+    //   ),
+    // );
     return Container(
-      color: Colors.grey,
+              child: Column(
+                children: <Widget>[
+                  Image.network(
+                  detail.url,
+                  height: 200,
+                  width: 280,
+                  fit: BoxFit.cover,
+                  ),
+                  ListView.builder(
+                    padding: EdgeInsets.fromLTRB(16, 8, 16, 30),
+                    shrinkWrap: true,
+                    physics: const NeverScrollableScrollPhysics(),
+                    itemCount: detail.notes.length,
+                    itemBuilder: (context, index) {
+                      return Text("${index+1}. ${detail.notes[index]}");
+                  },
+                ),
+              ],
+      ),
     );
   }
 }

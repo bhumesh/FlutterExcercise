@@ -23,7 +23,7 @@ class _MyHomePageState extends State<MyHomePage> {
           color: Colors.grey,
               child: InkWell(
                 onTap: () {
-                  Get.to(HomeItemDetailsPage(data: item));
+                  Get.to(HomeItemDetailsPage(data: item.details));
                 },
                 child: Container(
                   margin: EdgeInsets.all(5.0),
@@ -51,7 +51,7 @@ class _MyHomePageState extends State<MyHomePage> {
                               padding: EdgeInsets.symmetric(
                                   vertical: 10.0, horizontal: 20.0),
                               child: Text(
-                                'Text 1- image',
+                                "${item.header}\n${item.description}",
                                 style: TextStyle(
                                   color: Colors.white,
                                   fontSize: 20.0,
